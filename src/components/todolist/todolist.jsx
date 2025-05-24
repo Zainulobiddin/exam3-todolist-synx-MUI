@@ -391,16 +391,16 @@ export default function Todolist() {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead >
-            <TableRow sx={theme ? { backgroundColor: "#ccc" } : { backgroundColor: "#e444f3" }}>
-              <TableCell>Name</TableCell>
-              <TableCell align="center">City</TableCell>
-              <TableCell align="center">Status</TableCell>
-              <TableCell align="center">Phone</TableCell>
-              <TableCell align="center"></TableCell>
+            <TableRow sx={theme ? { backgroundColor: "#ccc" } : { backgroundColor: "#1f1919" }}>
+              <TableCell sx={theme ? {} : {color: 'white'}}>Name</TableCell>
+              <TableCell sx={theme ? {} : {color: 'white'}} align="center">City</TableCell>
+              <TableCell sx={theme ? {} : {color: 'white'}} align="center">Status</TableCell>
+              <TableCell sx={theme ? {} : {color: 'white'}} align="center">Phone</TableCell>
+              <TableCell sx={theme ? {} : {color: 'white'}} align="center"></TableCell>
             </TableRow>
           </TableHead>
 
-          <TableBody sx={theme ? { backgroundColor: "#ccc" } : { backgroundColor: "#e444f3" }}>
+          <TableBody sx={theme ? { backgroundColor: "#ccc" } : { backgroundColor: "#1f1919" }}>
             {users
               .filter((user) => user.city.includes(city))
               .filter((user) => {
@@ -420,7 +420,7 @@ export default function Todolist() {
                   key={user.name}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" sx={theme ? {} : {color: 'white'}}>
                     <Box
                       sx={{
                         display: "flex",
@@ -435,14 +435,14 @@ export default function Todolist() {
                       </Box>
                     </Box>
                   </TableCell>
-                  <TableCell align="center">{user.city}</TableCell>
+                  <TableCell sx={theme ? {} : {color: 'white'}} align="center">{user.city}</TableCell>
                   <TableCell align="center">
                     <Typography className={user.status ? "active" : "inactive"}>
                       {user.status ? "Active" : "InActive"}
                     </Typography>
                   </TableCell>
-                  <TableCell align="center">{user.phone}</TableCell>
-                  <TableCell align="center">
+                  <TableCell sx={theme ? {} : {color: 'white'}} align="center">{user.phone}</TableCell>
+                  <TableCell sx={theme ? {} : {color: 'white'}} align="center">
                     <MoreHorizIcon onClick={() => handleClickOpenShow(user)} />
                   </TableCell>
                 </TableRow>
