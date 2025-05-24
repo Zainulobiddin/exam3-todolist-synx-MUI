@@ -1,0 +1,69 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  /* padding-top: 20px; */
+  align-items: center;
+  padding:  20px;
+}
+
+.imgUser {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  gap: 25px;
+  cursor: pointer;
+}
+.divAction {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imgInfo {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.infoUser {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #40464c;
+}
+.actionParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.active, .inactive {
+  color: white;
+  font-weight: 700;
+
+}
+.active {
+  background-color: #259323;
+}
+
+.inactive {
+  background-color: #40464c;
+}
